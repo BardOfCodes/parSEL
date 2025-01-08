@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ParSEL: Parameterized Shape Editing with Language">
+  <meta name="keywords" content="ParSEL, Parameterized Procedural Editing 3D Shapes with Language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ParSEL: Parameterized Shape Editing with Language</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/png" href="./static/data_3d/models/03001627_chair_126.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+  <!-- For viewing 3D models -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <!-- Import the component -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+
+  <script src="./static/js/video_comparison.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ParSEL: Parameterized Shape Editing with Language</h1>
+          <div class="is-size-4 publication-authors mt-3 darkest-font">
+            <div class="columns">
+            <div class="column ml-2 mr-2">
+            <span class="author-block">
+              <a href="https://bardofcodes.github.io/">Aditya Ganeshan</a></span>
+            </div>
+            <div class="column ml-2 mr-2">
+            <span class="author-block">
+              <a href="https://rkjones4.github.io/">Ryan H. Huang</a></span>
+            </div>
+            <div class="column ml-2 mr-2">
+            <span class="author-block">
+              <a href="https://rkjones4.github.io/">R. Kenny Jones</a></span>
+            </div>
+            <div class="column ml-2 mr-2">
+            <span class="author-block">
+              <a href="https://dritchie.github.io/">Daniel Ritchie</a>
+            </div>
+            </div>
+          </div>
+          <div class="is-size-4 publication-authors mt-3">
+            <span class="author-block">Brown University</span>
+          </div>
+          <div class="is-size-4 publication-authors mt-3">
+            <p>  Siggraph Asia, 2024 (Journal) </p>
+          </div>
+
+          <div class="columns has-text-centered is-centered is-mobile mt-3 mb-0 is-multiline">
+            <div class="column ml-2 mr-2 item">
+                <a href="https://bardofcodes.github.io/papers/parsel/paper.pdf">
+                    <img src="./static/images/paper.jpg" style="max-height: 80px;">
+                </a>
+                <a href="https://bardofcodes.github.io/papers/parsel/paper.pdf">
+                    <h4> Paper  (36 MB)</h4>
+                </a>
+            </div>
+              <div class="column ml-2 mr-2 item">
+                  <a href="https://bardofcodes.github.io/papers/parsel/paper_lowres.pdf">
+                      <img src="./static/images/paper.jpg" style="max-height: 80px;">
+                  </a>
+                  <a href="https://bardofcodes.github.io/papers/parsel/paper_lowres.pdf">
+                      <h4> Low Res (2.6 MB) </h4>
+                  </a>
+              </div>
+            <div class="column ml-2 mr-2 item">
+                <a href="https://bardofcodes.github.io/papers/parsel/supp.pdf">
+                    <img src="./static/images/supp.jpg" style="max-height: 80px">
+                </a>
+                <a href="https://bardofcodes.github.io/papers/parsel/supp.pdf">
+                    <h4> Supp. </h4>
+                </a>
+            </div>
+            <div class="column ml-2 mr-2 item">
+                <a href="https://arxiv.org/abs/2412.12463">
+                    <img src="./static/images/arxiv-logo.svg" style="max-height: 80px">
+                </a>
+                <a href="https://arxiv.org/abs/2412.12463">
+                    <h4> ArXiv </h4>
+                </a>
+            </div>
+            <div class="column ml-2 mr-2 item">
+                <a href="https://github.com/bardofcodes/parsel/">
+                    <img src="./static/images/github-logo.svg"  style="max-height: 80px">
+                </a>
+                <a href="https://github.com/bardofcodes/parsel/">
+                    <h4> Code </h4>
+                </a>
+            </div>
+            <div class="column ml-2 mr-2 item">
+                <a href="https://dl.acm.org/doi/10.1145/3687922">
+                    <img src="./static/images/acm.svg" style="max-height: 80px">
+                </a>
+                <a href="https://dl.acm.org/doi/10.1145/3687922">
+                    <h4> ACM DL </h4>
+                </a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section mt-1 pt-1">
+
+
+  <div class="container is-max-desktop">
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="box m-1 p-1 is-vcentered">
+      <figure class="image">
+      <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+      <img src="./static/images/teaser.png" >
+      </figure> 
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column ">
+
+        <h2 class="subtitle has-text-justified is-size-5">
+          We introduce <span class="dnerf">ParSEL</span>, a system that enables <i>controllable</i> editing of 3D assets with natural language. (Left) Each subplot shows an input 3D asset (left), edit request (top) and the parametric editing capability provided by <span class="dnerf">ParSEL</span> (right). (Right) The parametric edits produced by <span class="dnerf">ParSEL</span> are composable, allowing users to explore shape variations of <i>non-parametric</i> models as seamlessly as they would with parametric models. 
+        </h2>
+      <!-- </div> -->
+      </div>
+      </div>
+      </div>
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <br>
+          <br>
+          <h2 class="title is-3">Abstract</h2>
+          <br>
+          <div class="content has-text-justified is-size-5">
+            <p>
+The ability to edit 3D assets from natural language presents a compelling paradigm to aid in the democratization of 3D content creation. However, while natural language is often effective at communicating general intent, it is poorly suited for specifying precise manipulation. To address this gap, we introduce <span class="dnerf"><b>ParSEL</b></span>, a system that enables controllable editing of high-quality 3D assets from natural language. Given a segmented 3D mesh and an editing request, <span class="dnerf">ParSEL</span> produces a <i>parameterized</i> editing program. Adjusting the program parameters allows users to explore shape variations with a precise control over the magnitudes of edits. To infer editing programs which align with an input edit request, we leverage the abilities of large-language models (LLMs). However, we find that while LLMs excel at identifying initial edit operations, they often fail to infer complete editing programs, and produce outputs that violate shape semantics. To overcome this issue, we introduce <span class="dnerf"><b>Analytical Edit Propagation (AEP)</b></span>, an algorithm which extends a seed edit with additional operations until a complete editing program has been formed. Unlike prior methods, <span class="dnerf">AEP</span> searches for analytical editing operations compatible with a range of possible user edits through the integration of computer algebra systems for geometric analysis. Experimentally we demonstrate <span class="dnerf">ParSEL</span>'s effectiveness in enabling controllable editing of 3D objects through natural language requests over alternative system designs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-max-desktop">
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column ">
+            <br>
+            <h2 class="title is-3">Editing Shapes with <span class="dnerf">ParSEL</span> programs in Blender</h2>
+            <br>
+          <div class="box box-white m-1 p-1 is-vcentered">
+          <figure class="image">
+          <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+          <div class="item item-steve">
+            <video poster="" id="steve" controls muted playsinline height="100%">
+                <source src="./static/videos/real_time_shape_variations.mp4"
+                        type="video/mp4">
+                </video>
+              </div>
+            </figure> 
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+  <div class="container is-max-desktop">
+    <!-- Shape Languages. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <h2 class="title is-3">Parameterized Editing with Language</h2>
+        <br>
+        <div class="content has-text-justified is-size-6">
+          <p>
+            Creating high-quality 3D assets is a labor-intensive process requiring years of training and expertise. The ability to edit existing assets to create new ones significantly lowers this barrier. However, manually modifying 3D objects, such as adjusting individual vertices or faces, remains tedious and time-consuming. To address this challenge, several efforts have explored the design of more intuitive and user-friendly shape-editing tools (like <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.12044">GeoSemantic Snap</a>).
+          </p>
+          <p>
+            Recent advancements in Natural Language Processing have inspired methods for editing 3D assets using natural language (<a href="https://shapewalk.github.io/">ShapeWalk</a>, <a href="https://changeit3d.github.io/">ShapeTalk</a>, <a href="https://threedle.github.io/text2mesh/">text2mesh</a>). While these methods make editing accessible by removing the need for tool-specific expertise, precise geometric editing remains a challenge. For instance, tasks like sub-part manipulation or spatial rearrangement require users to specify not only <i>what</i> to edit but also <i>how much</i>. Expressing edit magnitude through language is particularly difficult; terms like “moderately widen” or “greatly widen” are subjective, and numerical instructions (e.g., “0.2 units”) may not align intuitively with an object’s scale. This makes natural language a limited tool for achieving precise, controlled edits.
+          </p>
+        </div>
+        <h2 class="title is-5">
+          <i>Natural language is suitable for conveying edit intent, but not edit magnitude.</i></h2>
+        <div class="content has-text-justified is-size-6">
+          <p>
+            To address the challenge of precise and controllable editing of 3D assets, we introduce <span class="dnerf">ParSEL</span>, a system that combines the intuitiveness of natural language with the precision of parametric control. Users specify “how” to edit through natural language and “how much” through adjustable parameters, seamlessly exploring a family of shape variations (as shown in the video above). Critically, to ensure that the geometric relations remains consistent under a range of parameter variations, we represent all edit operations as closed-form analytical functions of the adjustable control parameters. In order to create such parameterized editing functions, we introduce a custom domain-specific language (DSL). This DSL not only encodes edits as algebraic expressions, but also enables a solver-less and fluid exploration of edits in real time, even on consumer-grade hardware, making it highly accessible. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="box m-1 p-1 is-vcentered">
+          <figure class="image">
+          <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+          <img src="./static/gifs/DSL example.gif" >
+          </figure> 
+          </div>
+          <h2 class="subtitle has-text-justified is-size-6"> A parameterized edit (corresonding to "widen the chair") and its editing program in our DSL. Edit Operators in our DSL help parameterize the magnitude of each edit (`amt`) with the user controlled parameter X. </h2>
+        </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <h2 class="title is-3">Translating Natural Language edit requests into Editing Programs</h2>
+        <div class="content has-text-justified is-size-6">
+          <p>
+            To ease the creation of these editing programs, we introduce a module that translates natural language edit requests into parameterized editing programs. This module combines the capabilities of large language models (LLMs) with the algebraic reasoning power of computer algebra systems (CAS). LLMs struggle to infer precise adjustments across multiple shape parts due to their limited geometric reasoning abilities, often producing inconsistent or incomplete outputs. We address this with our novel technique termed <span class="dnerf"><b>Analytical Edit Propagation (AEP)</b></span>, a technique that extends <i>partial</i> editing programs generated by LLMs by incorporating additional operators from our domain-specific language (DSL). AEP leverages CAS to analyze geometric relationships between object parts and generates additional closed-form analytical functions that ensure consistency across a range of possible edit magnitudes. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="box m-1 p-1 is-vcentered">
+          <figure class="image">
+          <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+          <img src="./static/images/overview.png" >
+          </figure> 
+          </div>
+          <h2 class="subtitle has-text-justified is-size-6"> <b>System Overview</b>: ParSEL converts a natural language edit request into a editing program by coupling the natural language abilities of LLMs with the algebraic reasoning capabilities of a CAS.</h2>
+        </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title is-2"><span class="dnerf">Analytical Edit Propagation (AEP)</span> </h2>
+        <br>
+        <div class="box m-1 p-1 is-vcentered">
+        <figure class="image">
+        <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+        <img src="./static/gifs/AEP.gif" >
+        </figure> 
+        </div>
+        <h2 class="subtitle has-text-justified is-size-6"> One of our key contributions is <span class="dnerf">Analytical Edit Propagation (AEP)</span> - we search for additional edit operators to restore inter-part relations. In the above example, on editing the seat its attachment relation with the leg is broken. Consequently, <span class="dnerf">AEP</span> searches for edits which restore this relation.</h2>
+      </div>
+      </div>
+    </div>
+
+</section>
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Qualitative Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+
+      <h2 class="title is-5">Evaluation on 3DCoMPaT++ dataset: Alternate formulations fail to generate programs that align with edit intent.</h2>
+      
+        <div class="box box-white m-1 p-1 is-vcentered">
+          <figure class="image">
+            <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+    <img src="./static/images/qualitative.png" >
+      </figure> 
+      </div>
+
+    </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+
+      <h2 class="title is-3">Application - <i>Proxydural</i> Modelling</h2>
+      <h2 class="title is-5">The edits generated from our system are composable - using multiple editing requests together we can create (approximately) parametric models of arbitrary 3D Shapes! </h2>
+      
+        <div class="box box-white m-1 p-1 is-vcentered">
+          <figure class="has-text-centered is-centered">
+            <!-- <iframe src="./static/pdfs/rewriters.pdf" loading="lazy" title="PDF-file" scrolling="no" border="0" width=100% frameborder="no" allowfullscreen framespacing="0"></iframe> -->
+    <img src="./static/gifs/proxydural.gif" >
+      </figure> 
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">BibTeX</h2>
+      <div class="bibtex">
+        <pre><code>@article{ganeshan2024parsel,
+          author = {Ganeshan, Aditya and Huang, Ryan and Xu, Xianghao 
+                    and Jones, R. Kenny and Ritchie, Daniel},
+          title = {ParSEL: Parameterized Shape Editing with Language},
+          year = {2024},
+          issue_date = {December 2024},
+          publisher = {Association for Computing Machinery},
+          address = {New York, NY, USA},
+          volume = {43},
+          number = {6},
+          issn = {0730-0301},
+          url = {https://doi.org/10.1145/3687922},
+          doi = {10.1145/3687922},
+          journal = {ACM Trans. Graph.},
+          month = nov,
+          articleno = {197},
+          numpages = {14},
+          }</code></pre>
+      </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column ">
+      <h2 class="title is-3">Acknowledgement</h2>
+      <div class="content has-text-justified is-size-6">
+        <p>
+          We would like to thank the anonymous reviewers for their helpful suggestions. This work was funded in parts by NSF award #1941808 and a Brown University Presidential Fellowship. Daniel Ritchie is an advisor to Geopipe and owns equity in the company. Geopipe is a start-up that is developing 3D technology to build immersive virtual copies of the real world with applications in various fields, including games and architecture.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+  
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        The website design has been adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> template.
+    </div>
+</footer>
+
+</body>
+</html>
